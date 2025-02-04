@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/ko07ga/kadou/kadou/cmd"
+	"github.com/ko07ga/kadou/cmd"
 )
 
 func main() {
