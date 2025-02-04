@@ -1,0 +1,8 @@
+services:
+  redis:
+    image: "redis:8.0-M03-alpine"
+    ports:
+      - 6379:6379
+    command: redis-server --requirepass your-password
+    volumes:
+      - ./db/redis:/data
