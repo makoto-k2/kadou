@@ -33,7 +33,6 @@ func NewClient(ctx context.Context) RedisClient {
 	return &redisClient{
 		c: redis.NewClient(&redis.Options{
 			Addr:       "localhost:6379",
-			Password:   "your-password",
 			DB:         0,
 			MaxRetries: 5,
 		}),

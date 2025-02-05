@@ -1,8 +1,15 @@
 services:
-  redis:
-    image: "redis:8.0-M03-alpine"
+  #redis:
+  #  image: "redis:8.0-M03-alpine"
+  #  ports:
+  #    - 6379:6379
+  #  command: redis-server
+  #  volumes:
+  #    - ./db/redis:/data
+  valkey:
+    image: "valkey/valkey:8.0.2-alpine"
     ports:
       - 6379:6379
-    command: redis-server --requirepass your-password
+    command: valkey-server 
     volumes:
-      - ./db/redis:/data
+      - ./db/valkey:/data
